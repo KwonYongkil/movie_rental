@@ -29,10 +29,10 @@ public class CustomerTest {
 
     @Test
     public void doRentTwoMovie() throws Exception {
-        customer.addRental(new Rental(new Movie("", Movie.CHILDRENS), 4));
+        customer.addRental(new Rental(new Movie("Iceman", Movie.CHILDRENS), 4));
         customer.addRental(new Rental(new Movie("", Movie.REGULAR), 5));
         assertThat(customer.statment(),
-                is("Rental Record for Kwon\n\t\t3.0\n\t\t6.5\nAmount owed is 9.5\nYou earned 2 frequent renter points"));
+                is("Rental Record for Kwon\n\tIceman\t3.0\n\t\t6.5\nAmount owed is 9.5\nYou earned 2 frequent renter points"));
     }
 
     @Test
